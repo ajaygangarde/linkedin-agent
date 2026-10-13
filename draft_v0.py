@@ -47,6 +47,8 @@ def write_draft(pages):
     for block in response.content:
         if block.type == "text":
             draft += block.text
+        if response.stop_reason == "max_tokens":
+            print("WARNING: reply was cut off")
     return draft, response.usage
 
 def main():
