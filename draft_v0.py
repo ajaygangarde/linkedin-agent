@@ -75,4 +75,5 @@ def main():
     print("Saved to", out_file)
     print("Tokens: input", usage.input_tokens, "output", usage.output_tokens)
 
-main()
+if __name__ == "__main__":
+    main()
